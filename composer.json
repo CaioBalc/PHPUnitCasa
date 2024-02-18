@@ -1,0 +1,17 @@
+{
+    "name": "balcz/php-unit-casa",
+    "autoload": {
+        "psr-4": {
+            "Balcz\\PhpUnitCasa\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "CaioBalc",
+            "email": "balczarekcaio@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^10.5"
+    }
+}
