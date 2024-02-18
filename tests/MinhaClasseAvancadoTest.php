@@ -7,14 +7,17 @@ require_once "src/MinhaClasseAvancado.php";
 class MinhaClasseAvancadoTest extends TestCase{
     public function testSoma(){
         $classe = new MinhaClasseAvancado();
-        # Exercício 1
+        # Valores positivos
         $resultado = $classe->somar(2, 3);
         $this->assertEquals(5, $resultado);
-        # Exercício 2
+        # Valores negativos
+        $resultado = $classe->somar(-2, -3);
+        $this->assertEquals(-5, $resultado);
+        # Valores diferentes
         $resultado = $classe->somar(-2, 3);
         $this->assertEquals(1, $resultado);
-        # Exercício 3
-        $resultado = $classe->somar(0, 5);
-        $this->assertEquals(5, $resultado);
+        # Adição de zero
+        $resultado = $classe->somar(0, 3);
+        $this->assertEquals(3, $resultado);
     }
 }
