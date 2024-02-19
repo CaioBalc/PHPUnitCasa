@@ -21,6 +21,10 @@ class MinhaClasseAvancado {
         }
         return $a - $b;
     }
+
+    function somaCorreta($a, $b){
+        return $a + $b;
+    }
 }
 
 ?>

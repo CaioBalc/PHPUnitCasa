@@ -17,6 +17,9 @@ class MinhaClasseAvancadoTest extends TestCase{
         $this->assertEquals(3, $lista->somar([0, 3]));
         # Valores decimais
         $this->assertEquals(15, $lista->somar([10, 33, -28]));
+        $this->assertEquals(5.5, $lista->somar([2.5, 3]));
+        # Lista com Strings Numéricas:
+        $this->assertEquals(7, $lista->somar(['2', '5']));
         # Valores não numérico
         $this->assertEquals(0, $lista->somar(["Frase tal", "Palavra"]));
     }
@@ -45,4 +48,28 @@ class MinhaClasseAvancadoTest extends TestCase{
         # Valores não numérico
         $this->assertEquals(0, $lista->somar(["Frase tal", "Palavra"]));
     }
+
+    /**
+     * APERFEIÇOAR O CÓDIGO
+     */
+    public function testSomaCorreta(){
+        $lista = new MinhaClasseAvancado();
+
+        # Valores positivos
+        $resultado = $lista->somaCorreta(2, 3);
+        $this->assertEquals(5, $resultado);
+    }
+
+    /**
+     * APERFEIÇOAR O CÓDIGO E ADICIONAR ELE AO MINHACLASSEAVANCADO
+     */
+    public function testSomaComArgumentosInvalidos(){
+        $lista = new MinhaClasseAvancado();
+    
+        # Verifica se o método somar() lança uma exceção ao passar argumentos não numéricos
+        $this->expectException(\Exception::class);
+        $lista->somar(["Frase tal", "Palavra"]);
+    }
+    
+    
 }
